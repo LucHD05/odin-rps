@@ -32,9 +32,10 @@ function playerSelection() {
 function playRound() {
     let playerWin = 0;
     let playerLose = 0;
-    for(let i = 0; i = 1; i + 0) {
+    for(let i = 0; i < 5; i++) {
         let player = playerSelection();
         let computer = getComputerChoice();
+        console.log("Round " + (i + 1))
         console.log(player + " vs. " + computer);
         if (player == "rock") {
             if (computer == "rock") {
@@ -76,6 +77,14 @@ function playRound() {
             }
         }
         console.log("Win: " + playerWin + "  " + "Lose: " + playerLose)
+        console.log("------------------")
+    }
+    if(playerWin > playerLose) {
+        console.log("You Win!")
+    } else if(playerWin < playerLose) {
+        console.log("You Lose!")
+    } else {
+        console.log("It's a Draw!")
     }
 }
 
